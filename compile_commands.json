@@ -1,0 +1,20 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-Wextra",
+      "-Weffc++",
+      "-Wconversion",
+      "-Wsign-conversion",
+      "-I./include",
+      "-c",
+      "-o",
+      "main.o",
+      "./src/main.cpp"
+    ],
+    "directory": "/home/rave/Documents/programming/cppreview/projects/rockpaperscissors",
+    "file": "/home/rave/Documents/programming/cppreview/projects/rockpaperscissors/src/main.cpp",
+    "output": "/home/rave/Documents/programming/cppreview/projects/rockpaperscissors/main.o"
+  }
+]

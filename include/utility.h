@@ -1,0 +1,4 @@
+#ifndef UTILITY_ASPFEIOJW3FJIOSEFJISEJF_H
+#define UTILITY_ASPFEIOJW3FJIOSEFJISEJF_H
+double randomDouble();
+#endif
