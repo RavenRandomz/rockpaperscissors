@@ -1,4 +1,5 @@
 #include "move.h"
+#include <iostream>
 
 Move::Move(const MoveType& movetype):
 	m_movetype{movetype}
@@ -52,4 +53,20 @@ bool Move::operator>(const Move& move)
 bool Move::operator<(const Move& move)
 {
 	return !(*this > move);
+}
+
+constexpr std::string_view Move::getString()const
+{
+	switch(m_movetype)
+	{
+		case MoveType::rock: return "rock";
+		case MoveType::paper: return "paper";
+		case MoveType::scissors: return "scissors";
+	}
+}
+
+std::ostream& operator<<(std::ostream& os, const Move& move)
+{
+	os << move.getString();
+	return os;
 }
