@@ -28,10 +28,15 @@ int main()
 {
 	IPlayer* player1 {new RandomAutoPlayer{std::string{"Bill"}}};
 	IPlayer* player2 {new RandomAutoPlayer{std::string{"Steve"}}};
+
+	for(int i{0}; i <= 100; i++)
+	{
+		std::cout << player1->doTurn() << i << '\n';
+	}
 	
 	
-	ClassicArena arena{player1, player2};
-	arena.playTurns(111110000);
+	//ClassicArena arena{player1, player2};
+	//arena.playTurns(111110000);
 	
 	
 	//initialize players
