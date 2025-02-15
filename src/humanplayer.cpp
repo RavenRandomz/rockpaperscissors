@@ -19,7 +19,7 @@ HumanPlayer::HumanPlayer(HumanPlayer const &player):
 {
 }
 
-void HumanPlayer::addOpponentRoundData(std::string_view name, Move)
+void HumanPlayer::addOpponentRoundData(std::string_view name, Move move)
 {
 }
 

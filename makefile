@@ -4,8 +4,8 @@ CXXFLAGS  = -Wall -Wextra -Weffc++ -Wconversion -Wsign-conversion -I$(INC_DIR)
 run: rockpaperscissors
 	./rockpaperscissors
 
-rockpaperscissors: main.o classicarena.o humanplayer.o move.o randomautoplayer.o utility.o
-	$(CXX) $(CXXFLAGS) main.o classicarena.o humanplayer.o move.o randomautoplayer.o utility.o -o rockpaperscissors
+rockpaperscissors: main.o classicarena.o humanplayer.o move.o randomautoplayer.o utility.o weightedautoplayer.o roundinfo.o
+	$(CXX) $(CXXFLAGS) main.o classicarena.o humanplayer.o move.o randomautoplayer.o utility.o weightedautoplayer.o roundinfo.o -o rockpaperscissors
 
 main.o: ./src/main.cpp
 	$(CXX) $(CXXFLAGS) -c ./src/main.cpp -o main.o
@@ -22,8 +22,14 @@ move.o: ./src/move.cpp
 randomautoplayer.o: ./src/randomautoplayer.cpp
 	$(CXX) $(CXXFLAGS) -c ./src/randomautoplayer.cpp -o randomautoplayer.o
 
+weightedautoplayer.o: ./src/weightedautoplayer.cpp
+	$(CXX) $(CXXFLAGS) -c ./src/weightedautoplayer.cpp -o weightedautoplayer.o
+
 utility.o: ./src/utility.cpp
 	$(CXX) $(CXXFLAGS) -c ./src/utility.cpp -o utility.o
+
+roundinfo.o: ./src/roundinfo.cpp
+	$(CXX) $(CXXFLAGS) -c ./src/roundinfo.cpp -o roundinfo.o
 clean:
 	rm -rf *.o
 

@@ -14,7 +14,7 @@ private:
 
 public:
 	
-	void addOpponentRoundData(std::string_view name, Move) override;
+	void addOpponentRoundData(std::string_view name, Move move) override;
 	HumanPlayer(std::string const &playerName);
 	HumanPlayer(HumanPlayer const &player);
 	Move doTurn() override;
