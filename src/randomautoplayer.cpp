@@ -8,15 +8,15 @@ Move RandomAutoPlayer::getRandomMove()
 	double rand {randomDouble()};
 	Move move{MoveType::rock};
 
-	if (0 <= rand < (1.0/3.0))
+	if (0 <= rand  && rand < (1.0/3.0))
 	{
 		move = Move{MoveType::rock};
 	}
-	else if ((1.0/3.0) <= rand < (2.0/3.0))
+	else if ((1.0/3.0) <= rand && rand < (2.0/3.0))
 	{
 		move = Move{MoveType::paper};
 	}
-	else if ((2.0/3.0) <= rand <= 1.0)
+	else if ((2.0/3.0) <= rand && rand <= 1.0)
 	{
 		move = Move{MoveType::scissors};
 	}
