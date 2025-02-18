@@ -28,6 +28,11 @@ public:
 	int getScore() override;
 	void addScore(int scoreAddition) override;
 	void addOpponentRoundData(std::string_view name, Move move) override;
+	/*
+	 * Assume that the weights add up to 1. If they exceed one, they get
+	 * truncated. If they are less than one the remaining probability is applied
+	 * to scissorWeights
+	 */
 	void setWeight(double rockWeight, double paperWeight, double scissorWeight);
 	
 };
