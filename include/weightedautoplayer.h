@@ -17,9 +17,9 @@ private:
 	double m_paperWeight{0};
 	double m_scissorWeight{0};
 
-	double m_rockThreshold{0};
-	double m_paperThreshold{0};
-	double m_scissorThreshold{0};
+	double m_rockThreshold{1};
+	double m_paperThreshold{1};
+	double m_scissorThreshold{1};
 
 public:
 	WeightedAutoPlayer(std::string_view name);

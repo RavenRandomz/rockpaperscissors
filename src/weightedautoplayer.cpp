@@ -11,6 +11,7 @@ Move WeightedAutoPlayer::doTurn()
 {
 	double rand{randomDouble()};
 	//The threshold is the maximum amount to trigger
+	std::cout << rand << '\n';
 	if ( (0 <= rand) && (rand <= m_rockThreshold))
 	{
 		return Move{MoveType::rock};
