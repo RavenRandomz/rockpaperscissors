@@ -65,8 +65,14 @@ constexpr std::string_view Move::getString()const
 	}
 }
 
+MoveType Move::getMoveType() const
+{
+	return m_movetype;
+}
+
 std::ostream& operator<<(std::ostream& os, const Move& move)
 {
 	os << move.getString();
 	return os;
 }
+

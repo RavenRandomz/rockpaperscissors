@@ -20,6 +20,7 @@ public:
 	bool operator>(const Move& move);
 	bool operator<(const Move& move);
 	constexpr std::string_view getString()const;
+	MoveType getMoveType() const;
 };
 
 std::ostream& operator<<(std::ostream& os, const Move& move);
