@@ -10,13 +10,15 @@
 using RoundData_t = std::vector<IndividualRoundInfo>;
 class LearningAutoPlayer : IPlayer
 {
+	using opponentCount_t = int;
 private:
 	WeightedAutoPlayer m_weightedPlayer;
 	RoundData_t m_roundData{};
+	int m_score;
 	
-	double oponentRockCount{0};
-	double oponentPaperCount{0};
-	double oponentScissorsCount{0};
+	opponentCount_t m_oponentRockCount{0};
+	opponentCount_t m_oponentPaperCount{0};
+	opponentCount_t m_oponentScissorsCount{0};
 	void updateMoveCounts(Move& move);
 public:
 	LearningAutoPlayer(const std::string_view name);
