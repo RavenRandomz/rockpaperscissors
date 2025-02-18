@@ -8,7 +8,7 @@
 #include <vector>
 
 using RoundData_t = std::vector<IndividualRoundInfo>;
-class LearningAutoPlayer : IPlayer
+class LearningAutoPlayer : public IPlayer
 {
 	using opponentCount_t = int;
 private:
