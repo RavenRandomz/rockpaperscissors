@@ -2,6 +2,11 @@
 #include "roundinfo.h"
 #include "utility.h"
 
+WeightedAutoPlayer::WeightedAutoPlayer(std::string_view name):
+	m_name {name}
+{
+}
+
 Move WeightedAutoPlayer::doTurn()
 {
 	double rand{randomDouble()};

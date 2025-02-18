@@ -22,6 +22,7 @@ private:
 	double m_scissorThreshold{0};
 
 public:
+	WeightedAutoPlayer(std::string_view name);
 	Move doTurn() override;
 	std::string_view getName() override;
 	int getScore() override;
