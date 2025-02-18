@@ -1,5 +1,7 @@
+#include "weightedautoplayer.h"
 #include "iplayer.h"
 #include "classicarena.h"
+#include "learningautoplayer.h"
 #include "randomautoplayer.h"
 #include "move.h"
 
@@ -26,17 +28,14 @@ void testMove()
 
 int main()
 {
-	IPlayer* player1 {new RandomAutoPlayer{std::string{"Bill"}}};
-	IPlayer* player2 {new RandomAutoPlayer{std::string{"Steve"}}};
+	WeightedAutoPlayer bill{"Bill"};
+	LearningAutoPlayer steve{"Steve"};
 
-	for(int i{0}; i <= 100; i++)
-	{
-		std::cout << player1->doTurn() << i << '\n';
-	}
-	
-	
-	//ClassicArena arena{player1, player2};
-	//arena.playTurns(111110000);
+	bill.setWeight(0.1, 0.2, 0.8);
+	bill.setWeight(0.1, 0.2, 0.8);
+
+	ClassicArena arena{&bill, &steve};
+	arena.playTurns(1000);
 	
 	
 	//initialize players
