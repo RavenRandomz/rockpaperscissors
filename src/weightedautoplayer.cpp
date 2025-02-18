@@ -53,12 +53,15 @@ void WeightedAutoPlayer::setWeight(double rockWeight, double paperWeight, double
 	m_paperWeight = paperWeight;
 	m_scissorWeight = scissorWeight;
 
+	m_rockThreshold = 0;
+
 
 	//The random number geneator will create a floating point number from 0 to
 	//1. The thresholds create
 	m_rockThreshold = m_rockWeight;
 	m_paperThreshold = m_rockThreshold + m_paperWeight;
 	m_scissorThreshold = m_paperWeight + m_scissorWeight;
+	std::cout << "Rock Theshold" << m_rockThreshold << '\n';
 }
 
 	
