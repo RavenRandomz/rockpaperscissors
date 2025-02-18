@@ -14,12 +14,13 @@ class LearningAutoPlayer : IPlayer
 private:
 	WeightedAutoPlayer m_weightedPlayer;
 	RoundData_t m_roundData{};
-	int m_score;
 	
-	opponentCount_t m_oponentRockCount{0};
-	opponentCount_t m_oponentPaperCount{0};
-	opponentCount_t m_oponentScissorsCount{0};
+	opponentCount_t m_opponentRockCount{0};
+	opponentCount_t m_opponentPaperCount{0};
+	opponentCount_t m_opponentScissorsCount{0};
+	int m_roundCount{0};
 	void updateMoveCounts(Move& move);
+	void setWeights();
 public:
 	LearningAutoPlayer(const std::string_view name);
 	virtual Move doTurn() override;
