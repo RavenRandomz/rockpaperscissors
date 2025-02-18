@@ -34,11 +34,18 @@ void ClassicArena::announceScore()
 	std::cout << m_player2->getName() << ": " << m_player2->getScore() << '\n';
 }
 
+void ClassicArena::announceMoves(const Move& player1Move, const Move& player2Move) const 
+{
+	std::cout << m_player1->getName() << ": " << player1Move << '\n';
+	std::cout << m_player2->getName() << ": " << player2Move << '\n';
+}
+
 void ClassicArena::turn()
 {
 	std::cout << m_player1->getName() << " vs. " << m_player2->getName() << '\n';
 	Move move1 = {m_player1->doTurn()};
 	Move move2 = {m_player2->doTurn()};
+	announceMoves(move1, move2);
 
 	if (move1 == move2)
 	{

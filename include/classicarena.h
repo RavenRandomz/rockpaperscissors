@@ -13,7 +13,8 @@ private:
 
 	void announceTie();
 	void announceVictory (std::string_view victor);
-	void announceScore ();
+	void announceScore();
+	void announceMoves(const Move& player1Move, const Move& player2Move) const;
 	void turn();
 public:
 	ClassicArena(IPlayer* player1, IPlayer* player2);
