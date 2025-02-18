@@ -7,6 +7,7 @@ LearningAutoPlayer::LearningAutoPlayer(const std::string_view name):
 }
 Move LearningAutoPlayer::doTurn()
 {
+	return m_weightedPlayer.doTurn();
 }
 
 void LearningAutoPlayer::updateMoveCounts(Move& move)
